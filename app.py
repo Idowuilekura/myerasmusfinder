@@ -58,7 +58,7 @@ footer {
     visibility: hidden;
 }
 .footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;

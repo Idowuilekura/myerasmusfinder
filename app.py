@@ -99,7 +99,7 @@ def search_courses(course_search):
         if len(final_df) >0:
             # st.write('Here are the Erasmus programs that closely match your search. You can scroll to the left for more information')
             # st.write(final_df.to_html(escape=False,index=False),unsafe_allow_html=True)
-            collapse_programs_df = st.beta_expander("Click to Expand/Collapse Erasmus Programs")
+            collapse_programs_df = st.expander("Click to Expand/Collapse Erasmus Programs")
             with collapse_programs_df:
                 st.write('Here are the Erasmus programs that closely match your search. You can scroll to the left for more information')
                 st.write(final_df.to_html(escape=False, index=False), unsafe_allow_html=True)
@@ -120,7 +120,7 @@ def search_awardees(course_name):
         if len(awardee_df) > 0:
             st.write('Find below the Profile of Erasmus Scholars from Nigeria that match your search, scroll to your left for more information')
             # st.write(awardee_df.to_html(escape=False,index=False),unsafe_allow_html=True)
-            collapse_awardee_df = st.beta_expander("Click to Expand/Collapse Awardee Details")
+            collapse_awardee_df = st.expander("Click on ► to Expand/Collapse Awardee Details")
             with collapse_awardee_df:
                 st.write(awardee_df.to_html(escape=False, index=False), unsafe_allow_html=True)
 
@@ -165,7 +165,7 @@ st.sidebar.markdown(
 
 st.markdown(
     """
-   <p>Click below to expand and learn how to search for your preferred Erasmus Mundus Program:</p>
+   <p>Click ► below to expand and learn how to search for your preferred Erasmus Mundus Program:</p>
 
 <details>
     <summary><strong>Search for your Preferred Erasmus Program</strong></summary>
@@ -190,7 +190,7 @@ if course_button:
 
 st.markdown(
     """
-   <p>Click below to expand and learn how to search for profiles of Erasmus awardees:</p>
+   <p>Click ► to expand and learn how to search for profiles of Erasmus awardees:</p>
 
 <details>
     <summary><strong>Search for Profiles of Erasmus Awardees</strong></summary>

@@ -63,12 +63,12 @@ def read_eras_file():
     eras_file = pd.read_excel('New_Erasmus Program Selection Aid.xlsx')
     eras_awardee_details = eras_file.drop('S/N',axis=1
                 )
-    mymap = {'NIL':np.NaN} 
+    mymap = {'NIL':np.nan} 
     eras_awardee_details= eras_awardee_details.applymap(lambda x: mymap.get(x) if x in mymap else x).dropna(subset=['University'])
     grade_map = {1.0:'First Class',2.1:'Second Class Upper',2.2:'Second Class Lower'}
     eras_awardee_details['Grade']=eras_awardee_details['Grade'].apply(lambda x: grade_map.get(x) if x in grade_map else x)
     eras_awardee_details['Year'] = eras_awardee_details.Year.astype(int).astype(str)
-    mymap_new = {np.NaN:'None'}
+    mymap_new = {np.nan:'None'}
     eras_awardee_details= eras_awardee_details.applymap(lambda x: mymap_new.get(x) if x in mymap_new else x)
     return eras_awardee_details
 
